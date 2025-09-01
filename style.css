@@ -1,0 +1,50 @@
+body { font-family: Arial, sans-serif; margin: 10px; }
+h1 { text-align: center; font-size: 1.5em; }
+.calendar-container { max-width: 1000px; margin: auto; text-align: center; }
+
+table { border-collapse: collapse; width: 100%; margin-top: 10px; table-layout: fixed; }
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  vertical-align: top;
+  word-wrap: break-word;
+  height: 70px;
+}
+th { background: #f0f0f0; font-size: 0.9em; }
+
+.hajnal { background-color: #b3d9ff; }
+.délután { background-color: #ffd699; }
+.éjszaka { background-color: #d1b3ff; }
+.pihenőnap { background-color: #e6e6e6; }
+
+.day-number { font-weight: bold; display: block; margin-bottom: 5px; font-size: 0.85em; }
+.nav-buttons { margin: 10px 0; text-align: center; }
+.nav-buttons button {
+  padding: 5px 15px;
+  margin: 0 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.start-day { border: 3px solid red !important; }
+.today {
+  position: relative;
+}
+.today::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Reszponzív beállítások mobilra */
+@media (max-width: 600px) {
+  th, td { padding: 5px; font-size: 0.75em; height: 50px; }
+  .day-number { font-size: 0.7em; }
+  .nav-buttons button { padding: 4px 8px; font-size: 0.85em; }
+}
